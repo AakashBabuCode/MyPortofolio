@@ -1,0 +1,364 @@
+/* General Styles */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f8; /* Light background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    animation: bgAnimation 10s infinite alternate; /* Background color animation */
+}
+
+/* Background Color Animation */
+@keyframes bgAnimation {
+    0% {
+        background-color: #f0f4f8;
+    }
+    50% {
+        background-color: #d1e3f5; /* Lighter blue */
+    }
+    100% {
+        background-color: #a2c9e6; /* Soft blue */
+    }
+}
+
+/* Hero Section */
+/* Hero Section */
+#hero {
+    padding: 100px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6); /* Glass effect */
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.5); /* Neumorphism effect */
+    max-width: 1200px; /* Center and limit width */
+    margin: 0 auto; /* Center horizontally */
+    transition: box-shadow 0.3s ease;
+    position: relative; /* Ensure text is properly displayed */
+}
+
+#hero h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out; /* Smooth fade-in effect */
+}
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem; /* Reduced font size */
+    text-align: center; /* Center align the text */
+    background: linear-gradient(145deg, #ff7eb9, #ff65a3, #6a82fb, #fc4a8a); /* Pink-blue-pink-violet gradient background */
+    color: white; /* Text color for the title */
+    padding: 12px 25px; /* Adjusted padding */
+    border-radius: 20px; /* Larger rounded corners for neumorphism */
+    box-shadow: inset 6px 6px 15px rgba(0, 0, 0, 0.1), inset -6px -6px 15px rgba(255, 255, 255, 0.2); /* Inner shadow for hollow effect */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+h2:hover {
+    background: linear-gradient(145deg, #fc4a8a, #6a82fb, #ff65a3, #ff7eb9); /* Reverse gradient on hover */
+    box-shadow: inset 8px 8px 20px rgba(0, 0, 0, 0.2), inset -8px -8px 20px rgba(255, 255, 255, 0.3); /* Enhanced inner shadow on hover */
+}
+
+
+
+
+/* Profile Picture Styles */
+.profile-pic-container {
+    display: inline-block;
+    margin-right: 20px; /* Space between image and text */
+    position: relative; /* To control the hover effect of the image */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Round image */
+    object-fit: cover; /* Ensures the image fills the circle */
+    border: 5px solid #f0f4f8; /* Border around the profile pic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    margin-bottom: 20px; /* Space below image */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for profile picture */
+.profile-pic-container:hover .profile-pic {
+    transform: scale(1.5); /* Scales the image */
+    border-color: #ff7eb9; /* Changes the border color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for focus effect */
+}
+
+/* Optional: Adding a gradient background effect when hovering the container */
+.profile-pic-container:hover {
+    background: linear-gradient(145deg, #ff7eb9, #ff65a3, #6a82fb, #fc4a8a); /* Gradient effect on hover */
+    border-radius: 50%; /* Keeps the rounded shape even when hovered */
+    padding: 10px; /* Padding to give space for the gradient effect */
+}
+
+.welcome-text {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Sample Key Projects Section */
+#projects {
+    padding: 60px 0;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 30%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.project img {
+    width: 100%;  /* Ensure the image takes the full width of its container */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #fff; /* Text color for the link */
+    font-weight: bold;
+    background: linear-gradient(145deg, #00b09b, #96c93d); /* Green gradient background */
+    padding: 10px 20px; /* Add padding for better clickable area */
+    border-radius: 50px; /* Rounded edges for neumorphism effect */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.7); /* Neumorphism effect */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.project-link:hover {
+    background: linear-gradient(145deg, #96c93d, #00b09b); /* Reverse gradient on hover */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Neumorphism hover effect */
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* CTA Button */
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #0056b3;
+}
+
+
+/* About Section */
+#about {
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.8); /* Glassmorphism Effect */
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.5); /* Neumorphism Effect */
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 3em; /* Increased font size */
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.5em; /* Increased font size */
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 20px;
+    font-size: 1.4em; /* Increased font size */
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+}
+
+.about-content ul li i {
+    margin-right: 10px;
+    color: #ff007f;
+}
+
+/* Skills Section - Grid Layout */
+#skills {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.skill-set {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 by 3 grid */
+    gap: 30px;
+}
+
+.skill {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.5); /* Neumorphism effect */
+    text-align: center;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 2s ease-out;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+.skill i {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1.2em;
+}
+
+/* Client Reviews Section */
+#reviews {
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.8); /* Glass effect */
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.5); /* Neumorphism effect */
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.review {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #666;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.8); /* Glass effect */
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.5); /* Neumorphism effect */
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.cta-btn {
+    background-color: #ff007f;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #ff4f92;
+    transform: translateY(-5px);
+}
+
+/* Footer Section */
+footer {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1), -8px -8px 20px rgba(255, 255, 255, 0.5);
+    width:100%;
+}
+
+footer .social-links a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer .social-links a i {
+    margin-right: 8px;
+}
+
+/* Set specific colors for each social platform */
+footer .social-links a[href*="linkedin.com"] {
+    color: #0A66C2; /* LinkedIn color */
+}
+
+footer .social-links a[href*="github.com"] {
+    color: #181717; /* GitHub color */
+}
+
+footer .social-links a[href*="youtube.com"] {
+    color: #FF0000; /* YouTube color */
+}
+
+/* Optional: Add hover effect for a more interactive experience */
+footer .social-links a:hover {
+    opacity: 0.8;
+}
+
